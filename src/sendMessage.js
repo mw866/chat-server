@@ -10,9 +10,7 @@ module.exports = function sendMessage (req, res, next) {
   const data = {
     message_type: 'ADMM',
     message: '[Group Channel Created] "Don\'t Call Us, We\'ll Call You." - The Hollywood Principle',
-    data: {
-      timestamp: (new Date(Date.now())).toJSON()
-    },
+    data: new Date(Date.now()).toISOString(),
     custom_type: 'notice',
     is_silent: false
   }
